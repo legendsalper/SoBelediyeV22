@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<footer class="page-footer font-small blue pt-4 mt-4">
+    <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content -->
+                <h5 class="text-uppercase">Çalışanlarımız</h5>
+                <p>Ahmet</p>
+                <p>Ali</p>
+                <p>Hasan</p>
+                <p>Mahmut</p>
+                <p>AbdulDeniz</p>
+                <p>AbdulBerk</p>
+                <p>AbdülCan</p>
+                <p>AbdulEfe</p>
+            </div>
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+                <!-- Links -->
+                <h5 class="text-uppercase">Bizle İlgili</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Adminler</a>
+                    </li>
+                    <li>
+                        <a href="#!">İletişim</a>
+                    </li>
+                    <li>
+                        <a href="#!">Son Hizmetler</a>
+                    </li>
+                    <li>
+                        <a href="#!">Gelecekteki Hizmetler</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+                <!-- Links -->
+                <h5 class="text-uppercase">İnteraktif</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Kullanıcı Ekleme</a>
+                    </li>
+                    <li>
+                        <a href="#!">Yorum Yapma</a>
+                    </li>
+                    <li>
+                        <a href="#!">Evrak Bırakma</a>
+                    </li>
+                    <li>
+                        <a href="#!">Adres Kayıt</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+    </div>
+    <div class="footer-copyright text-center py-3">
+        © 2018 Copyright: Alper Mısırlı
+        <a href="https://legendsalper.github.io"> Kişisel Web Sitem</a>
+    </div>
+</footer>
+
